@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Мое приложение",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TKUIK2020/js-RomIva-web/tree/main"
+  },
+  "author": "RomIva",
+  "license": "ISC",
+  "dependencies": {
+    "random-image-creator": "git+https://github.com/omkarpb/create-random-image.git",
+    "swipejs": "^2.3.0"
+  }
+}
