@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Изучаем Vue.js</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+  <input type="number" v-model="inputValue">
+  <ul>
+  <li v-bind:style="{'background-color': color}" v-for="(sup, index) in array">
+    <h1><span>{{base}}</span><sup>{{index + mathExp }}</sup> = {{sup}}</h1>
+  </li>
+  </ul>
+  <button @click="onClick">color</button>
+ {{createMassiv()}}
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+  const app = new Vue({
+el: '#app',
+data: {
+    inputValue: 2,
+    array: [],
+    mathExp: 5,
+    base: 3,
+    color: ''
+    },
+methods:{
+  onClick: function(){
+    this.color = 'green'
+
+  },
+        createMassiv: function(){
+          let i =0;
+          let mas = [];
+          while(i < this.inputValue){
+            mas[i] = this.base ** (this.mathExp + i);
+            i++;
+          }
+          this.array = mas
+                               }
+       }
+  })
+
+</script>
+</body>
+</html>
+
